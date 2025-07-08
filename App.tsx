@@ -6,7 +6,7 @@
  */
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import SystemControl from './components/SystemControl';
+import SystemControl from './components/systemcontrol.js';
 
 const App = () => {
   return (

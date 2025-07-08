@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Alert, StyleSheet, ImageBackground } from 'react-native';
 import axios from 'axios';
-import config from '../config'; // Import config values
+import config from '../config.js'; // Import config values
 
 const { PHONE_IP, AUTH_TOKEN } = config;
 
 const SystemControl = () => {
   const sendWOL = async () => {
     try {
-      const response = await axios.post(`http://${PHONE_IP}:5000/poweron`, {}, {
+      const response = await axios.post(`http://${PHONE_IP}:5000/wakec d`, {}, {
         headers: {
           Authorization: AUTH_TOKEN
         }
@@ -21,7 +21,7 @@ const SystemControl = () => {
 
   const sendShutdown = async () => {
     try {
-      const response = await axios.post(`http://${PHONE_IP}:5001/shutdown`, {}, {
+      const response = await axios.post(`http://${PHONE_IP}:5002/shutdown`, {}, {
         headers: {
           Authorization: AUTH_TOKEN
         }
