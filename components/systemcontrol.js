@@ -8,7 +8,7 @@ const { PHONE_IP, AUTH_TOKEN } = config;
 const SystemControl = () => {
   const sendWOL = async () => {
     try {
-      const response = await axios.post(`http://${PHONE_IP}:5000/wakec d`, {}, {
+      const response = await axios.post(`http://${PHONE_IP}:5000/wake`, {}, {
         headers: {
           Authorization: AUTH_TOKEN
         }
